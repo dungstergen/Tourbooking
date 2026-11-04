@@ -85,7 +85,7 @@ RenderOptions.BitmapScalingMode="HighQuality"
                         <Path Data="M14.4,6L14,4H5V21H7V14H12.4L12.8,16H20V6H14.4M18,14H14.2L13.8,12H7V6H12.2L12.6,8H18V14Z" Fill="White" Width="18" Height="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
                     <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                        <TextBlock Text="TourBooking Pro" FontSize="16" FontWeight="Bold" Foreground="#101828"/>
+                        <TextBlock Text="TourBooking" FontSize="16" FontWeight="Bold" Foreground="#101828"/>
                         <TextBlock Text="Nhân Viên" FontSize="12" Foreground="#667085" Margin="0,2,0,0"/>
                     </StackPanel>
                 </Grid>

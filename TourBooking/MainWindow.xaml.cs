@@ -1,4 +1,4 @@
-using System.Windows;
+﻿using System.Windows;
 using TourBooking.Views;
 using TourBooking.Views.Admin;
 using TourBooking.ViewModels;
@@ -18,14 +18,14 @@ namespace TourBooking
         {
             if (SessionService.IsAdmin)
             {
-                Title = "Admin Portal - Hệ thống Quản trị TourBooking Pro";
+                Title = "TourBooking";
                 var adminVM = new AdminDashboardViewModel();
                 var adminView = new AdminDashboardView { DataContext = adminVM };
                 SwitchView(adminView);
             }
             else
             {
-                Title = "Staff Portal - Hệ thống Quản lý TourBooking Pro";
+                Title = "TourBooking";
                 SwitchView(new DashboardView());
             }
         }

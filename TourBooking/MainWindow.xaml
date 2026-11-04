@@ -1,11 +1,11 @@
-<Window x:Class="TourBooking.MainWindow"
+﻿<Window x:Class="TourBooking.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:v="clr-namespace:TourBooking.Views"
         mc:Ignorable="d"
-        Title="TourBooking Pro - Hệ thống Quản trị &amp; Đặt Tour Du lịch" Height="780" Width="1380"
+        Title="TourBooking" Height="780" Width="1380"
         WindowStartupLocation="CenterScreen">
 
     <ContentControl x:Name="MainContentContainer"/>

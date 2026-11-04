@@ -1,8 +1,8 @@
-<Window x:Class="TourBooking.Views.LoginWindow"
+﻿<Window x:Class="TourBooking.Views.LoginWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Name="loginWindow"
-        Title="Đăng nhập hệ thống - TourBooking Pro" Height="620" Width="900"
+        Title="TourBooking" Height="620" Width="900"
         WindowStartupLocation="CenterScreen"
         Background="#F0FDFA"
         FontFamily="Segoe UI">
@@ -37,7 +37,7 @@
                         <Border Width="32" Height="32" Background="White" CornerRadius="8" Margin="0,0,10,0">
                             <TextBlock Text="✦" Foreground="#0F766E" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <TextBlock Text="TourBooking Pro" Foreground="White" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"/>
+                        <TextBlock Text="TourBooking" Foreground="White" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"/>
                     </StackPanel>
 
                     <StackPanel Grid.Row="1" VerticalAlignment="Center" Margin="0,0,10,0">
@@ -129,7 +129,7 @@
                     </Grid>
                 </Border>
 
-                <TextBlock Grid.Row="7" Text="© 2026 TourBooking Pro. All rights reserved." FontSize="11" Foreground="#94A3B8" HorizontalAlignment="Left"/>
+                <TextBlock Grid.Row="7" Text="© 2026 TourBooking. All rights reserved." FontSize="11" Foreground="#94A3B8" HorizontalAlignment="Left"/>
             </Grid>
         </Grid>
     </Border>

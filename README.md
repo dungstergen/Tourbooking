@@ -1,4 +1,4 @@
-# TourBooking Pro - Hệ thống Quản trị & Điều hành Tour Du lịch
+﻿# TourBooking - Hệ thống Quản trị & Điều hành Tour Du lịch
 
 Hệ thống quản lý, điều hành và đặt tour du lịch chuyên nghiệp dành cho doanh nghiệp lữ hành, được xây dựng trên nền tảng WPF (.NET Framework 4.7.2) với kiến trúc MVVM hiện đại.
 
@@ -78,4 +78,4 @@ Hệ thống quản lý, điều hành và đặt tour du lịch chuyên nghiệ
 - **Họ và tên:** Nguyễn Tiến Dũng
 - **GitHub:** [@dungstergen](https://github.com/dungstergen)
 - **Email:** nguyentiendung01062005@gmail.com
-- **Dự án:** TourBooking Pro - Báo cáo Đồ án cuối kỳ
+- **Dự án:** TourBooking - Báo cáo Đồ án cuối kỳ
