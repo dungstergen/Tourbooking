@@ -1,0 +1,136 @@
+<Window x:Class="TourBooking.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Name="loginWindow"
+        Title="Đăng nhập hệ thống - TourBooking Pro" Height="620" Width="900"
+        WindowStartupLocation="CenterScreen"
+        Background="#F0FDFA"
+        FontFamily="Segoe UI">
+
+    <Border CornerRadius="16" Margin="30" Background="White">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="30" ShadowDepth="0" Color="#99F6E4" Opacity="0.5"/>
+        </Border.Effect>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4.3*"/>
+                <ColumnDefinition Width="5.7*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" CornerRadius="16,0,0,16" Padding="35">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#042F2E" Offset="0.0"/>
+                        <GradientStop Color="#0F766E" Offset="0.6"/>
+                        <GradientStop Color="#14B8A6" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center">
+                        <Border Width="32" Height="32" Background="White" CornerRadius="8" Margin="0,0,10,0">
+                            <TextBlock Text="✦" Foreground="#0F766E" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <TextBlock Text="TourBooking Pro" Foreground="White" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1" VerticalAlignment="Center" Margin="0,0,10,0">
+                        <TextBlock Text="Nền tảng Quản trị &amp; Điều hành Tour Du lịch" 
+                                   Foreground="White" FontSize="26" FontWeight="Bold" TextWrapping="Wrap" LineHeight="34"/>
+                        <TextBlock Text="Hệ thống số hóa quy trình vận hành, quản lý lịch trình tour và chăm sóc khách hàng tối ưu." 
+                                   Foreground="#CCFBF1" FontSize="13.5" Margin="0,15,0,0" TextWrapping="Wrap" LineHeight="20"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,5">
+                        <Border Background="#20FFFFFF" CornerRadius="12" Padding="12,5" Margin="0,0,8,0">
+                            <TextBlock Text="✈ Quản trị Tour" Foreground="White" FontSize="11" FontWeight="SemiBold"/>
+                        </Border>
+                        <Border Background="#20FFFFFF" CornerRadius="12" Padding="12,5">
+                            <TextBlock Text="📊 Báo cáo thông minh" Foreground="White" FontSize="11" FontWeight="SemiBold"/>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Grid Grid.Column="1" Margin="50,35,50,35">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Margin="0,10,0,25">
+                    <TextBlock Text="Đăng nhập hệ thống" FontSize="26" FontWeight="Bold" Foreground="#0F172A"/>
+                    <TextBlock Text="Vui lòng nhập thông tin tài khoản của bạn để tiếp tục" FontSize="13.5" Foreground="#64748B" Margin="0,6,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="0,0,0,16">
+                    <TextBlock Text="TÊN ĐĂNG NHẬP / EMAIL" FontSize="11" FontWeight="Bold" Foreground="#475569" Margin="0,0,0,6"/>
+                    <Grid>
+                        <TextBox x:Name="txtUsername" Padding="12,2,10,2" FontSize="14" Foreground="#0F172A" BorderBrush="#CBD5E1" Height="40" VerticalContentAlignment="Center">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="6"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Margin="0,0,0,18">
+                    <TextBlock Text="MẬT KHẨU" FontSize="11" FontWeight="Bold" Foreground="#475569" Margin="0,0,0,6"/>
+                    <Grid>
+                        <PasswordBox x:Name="txtPassword" Padding="12,2,10,2" FontSize="14" Foreground="#0F172A" BorderBrush="#CBD5E1" Height="40" VerticalContentAlignment="Center">
+                            <PasswordBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="6"/>
+                                </Style>
+                            </PasswordBox.Resources>
+                        </PasswordBox>
+                    </Grid>
+                </StackPanel>
+
+                <Grid Grid.Row="3" Margin="0,0,0,22">
+                    <CheckBox Content="Ghi nhớ đăng nhập" FontSize="13" Foreground="#475569" VerticalContentAlignment="Center"/>
+                    <TextBlock Text="Quên mật khẩu?" FontSize="13" FontWeight="SemiBold" Foreground="#0D9488" HorizontalAlignment="Right" VerticalAlignment="Center" Cursor="Hand"/>
+                </Grid>
+
+                <Button Grid.Row="4" Click="BtnLogin_Click" Background="#0D9488" BorderThickness="0" Foreground="White" Height="42" FontSize="14" FontWeight="Bold" Cursor="Hand">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="6"/>
+                        </Style>
+                    </Button.Resources>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="ĐĂNG NHẬP HỆ THỐNG" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Border Grid.Row="6" Background="#F0FDFA" BorderBrush="#CCFBF1" BorderThickness="1" CornerRadius="6" Padding="12" Margin="0,0,0,15">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="1" FontSize="12" Foreground="#0F766E" TextWrapping="Wrap" LineHeight="17">
+                            Nếu gặp sự cố truy cập, vui lòng liên hệ <Run FontWeight="SemiBold" Foreground="#115E59">Ban Quản Trị Hệ Thống</Run>.
+                        </TextBlock>
+                    </Grid>
+                </Border>
+
+                <TextBlock Grid.Row="7" Text="© 2026 TourBooking Pro. All rights reserved." FontSize="11" Foreground="#94A3B8" HorizontalAlignment="Left"/>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
