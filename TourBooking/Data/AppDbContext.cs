@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -36,7 +36,7 @@ namespace TourBooking.Data
 
                     var sampleStaffs = new List<Staff>
                     {
-                        new Staff { StaffCode = "NV01", FullName = "Nguyễn Trọng Hùng", Username = "admin", PasswordHash = passHash, Role = UserRole.Admin, IsActive = true },
+                        new Staff { StaffCode = "NV01", FullName = "Nguyễn Tiến Dũng", Username = "admin", PasswordHash = passHash, Role = UserRole.Admin, IsActive = true },
                         new Staff { StaffCode = "NV02", FullName = "Trần Thị Mai", Username = "admin2", PasswordHash = passHash, Role = UserRole.Admin, IsActive = true },
                         new Staff { StaffCode = "NV03", FullName = "Lê Hồng Nhung", Username = "nv_nhung", PasswordHash = passHash, Role = UserRole.Staff, IsActive = true },
                         new Staff { StaffCode = "NV04", FullName = "Phạm Minh Tuấn", Username = "nv_tuan", PasswordHash = passHash, Role = UserRole.Staff, IsActive = true },
@@ -69,7 +69,7 @@ namespace TourBooking.Data
         {
             string defaultPasswordHash = PasswordHasher.Hash("123456");
 
-            context.Staffs.Add(new Staff { StaffCode = "NV01", FullName = "Nguyễn Trọng Hùng", Username = "admin", PasswordHash = defaultPasswordHash, Role = UserRole.Admin, IsActive = true });
+            context.Staffs.Add(new Staff { StaffCode = "NV01", FullName = "Nguyễn Tiến Dũng", Username = "admin", PasswordHash = defaultPasswordHash, Role = UserRole.Admin, IsActive = true });
             context.Staffs.Add(new Staff { StaffCode = "NV02", FullName = "Trần Thị Mai", Username = "admin2", PasswordHash = defaultPasswordHash, Role = UserRole.Admin, IsActive = true });
             context.Staffs.Add(new Staff { StaffCode = "NV03", FullName = "Lê Hồng Nhung", Username = "nv_nhung", PasswordHash = defaultPasswordHash, Role = UserRole.Staff, IsActive = true });
             context.Staffs.Add(new Staff { StaffCode = "NV04", FullName = "Phạm Minh Tuấn", Username = "nv_tuan", PasswordHash = defaultPasswordHash, Role = UserRole.Staff, IsActive = true });
