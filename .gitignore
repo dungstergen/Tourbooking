@@ -1,11 +1,16 @@
 # Cache và cấu hình tạm thời của Visual Studio
 .vs/
+.vscode/
 [Dd]ebug/
 [Rr]elease/
 x64/
 x86/
-bbin/
+bin/
+[Bb]in/
 obj/
+[Oo]bj/
+*_wpftmp.csproj
+*.htm
 
 # Các file cấu hình người dùng cá nhân
 *.user
