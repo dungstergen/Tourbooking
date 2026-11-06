@@ -1,4 +1,4 @@
-﻿namespace TourBooking.Data.Migrations
+namespace TourBooking.Data.Migrations
 {
     using System;
     using System.Data.Entity;
@@ -19,7 +19,7 @@
 
             context.Staffs.AddOrUpdate(
                 s => s.Username,
-                new Staff { StaffCode = "NV01", FullName = "Nguyễn Trọng Hùng", Username = "admin", PasswordHash = defaultPasswordHash, Role = UserRole.Admin, IsActive = true }
+                new Staff { StaffCode = "NV01", FullName = "Nguyễn Tiến Dũng", Username = "admin", PasswordHash = defaultPasswordHash, Role = UserRole.Admin, IsActive = true }
             );
 
             context.Tours.AddOrUpdate(

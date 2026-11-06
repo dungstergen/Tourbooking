@@ -1,4 +1,4 @@
-﻿# TourBooking - Hệ thống Quản trị & Điều hành Tour Du lịch
+# TourBooking - Hệ thống Quản trị & Điều hành Tour Du lịch
 
 Hệ thống quản lý, điều hành và đặt tour du lịch chuyên nghiệp dành cho doanh nghiệp lữ hành, được xây dựng trên nền tảng WPF (.NET Framework 4.7.2) với kiến trúc MVVM hiện đại.
 
@@ -17,7 +17,7 @@ Hệ thống quản lý, điều hành và đặt tour du lịch chuyên nghiệ
   - Tra cứu nhanh thông tin tour, lịch trình và số chỗ còn trống.
   - Tạo đơn đặt tour cho khách hàng với quy trình tối ưu hóa.
   - Quản lý đơn hàng, cập nhật trạng thái đơn (Đã thanh toán, Đã hủy, Hoàn tiền).
-  - Tích hợp thanh toán QR Code ngân hàng tự động.
+  - Tích hợp thanh toán QR Code ngân hàng tự động (VietQR).
   - Xuất vé / hóa đơn xác nhận đặt tour định dạng PDF.
   - Theo dõi hiệu suất cá nhân và doanh số đạt được theo tháng.
 
@@ -33,8 +33,8 @@ Hệ thống quản lý, điều hành và đặt tour du lịch chuyên nghiệ
 
 - **Ngôn ngữ & Nền tảng:** C# (.NET Framework 4.7.2)
 - **Công nghệ giao diện:** WPF (Windows Presentation Foundation), XAML
-- **Mô hình kiến trúc:** MVVM (Model - View - ViewModel)
-- **Cơ sở dữ liệu & ORM:** SQL Server, Entity Framework 6 (Code First / DbFirst)
+- **Mô hình kiến trúc:** MVVM (Model - View - ViewModel) kết hợp Repository & Service Pattern
+- **Cơ sở dữ liệu & ORM:** SQL Server, Entity Framework 6 (Code First)
 - **Thư viện bên thứ ba:**
   - `LiveCharts.Wpf`: Vẽ biểu đồ doanh thu và xu hướng đặt tour.
   - `iTextSharp`: Xuất hóa đơn, vé xác nhận ra file PDF.
@@ -47,35 +47,40 @@ Hệ thống quản lý, điều hành và đặt tour du lịch chuyên nghiệ
 
 ### Yêu cầu hệ thống:
 - Hệ điều hành: Windows 10/11
-- Visual Studio 2022 trở lên (có cài đặt workload **.NET desktop development**)
-- Microsoft SQL Server / SQL Server Express (2019 trở lên)
+- Visual Studio (2019 / 2022 trở lên có workload **.NET desktop development**)
+- Microsoft SQL Server / SQL Server Express (2017 trở lên)
 
-### Các bước cài đặt:
-1. **Clone repository:**
-   ```bash
-   git clone https://github.com/dungstergen/Tourbooking.git
-   ```
-2. **Cấu hình chuỗi kết nối cơ sở dữ liệu:**
+### Các bước khởi chạy:
+1. **Khởi tạo Cơ sở dữ liệu (Chọn 1 trong 2 cách):**
+   - **Cách 1 (Khuyên dùng):** Mở SQL Server Management Studio (SSMS), mở file `Database/TourBookingDB.sql` và bấm **Execute**. Toàn bộ cấu trúc bảng và dữ liệu mẫu đầy đủ sẽ được nạp ngay lập tức.
+   - **Cách 2 (Tự động):** Không cần chạy file SQL, Entity Framework sẽ tự động tạo cơ sở dữ liệu `TourBookingDB` và nạp dữ liệu khởi tạo khi bạn bấm chạy ứng dụng lần đầu.
+2. **Cấu hình kết nối (Nếu cần):**
    - Mở file `TourBooking/App.config`.
-   - Cập nhật chuỗi kết nối `AppDbContext` phù hợp với máy của bạn:
-     ```xml
-     <connectionStrings>
-         <add name="AppDbContext"
-              connectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=TourBookingDB;Integrated Security=True"
-              providerName="System.Data.SqlClient" />
-     </connectionStrings>
-     ```
-3. **Mở giải pháp trong Visual Studio:**
-   - Mở file `TourBooking.slnx` hoặc `TourBooking/TourBooking.csproj`.
-   - Build Solution (`Ctrl + Shift + B`).
+   - Kiểm tra `Data Source` xem đã khớp với tên SQL Server của máy bạn chưa (mặc định là `localhost\SQLEXPRESS` hoặc `.\SQLEXPRESS`).
+3. **Mở dự án trong Visual Studio:**
+   - Mở file `TourBooking.sln` (tương thích mọi bản Visual Studio) hoặc `TourBooking.slnx`.
+   - Chọn cấu hình **Debug | Any CPU**.
+   - Bấm **Build** $\rightarrow$ **Rebuild Solution** (`Ctrl + Shift + B`).
 4. **Khởi chạy ứng dụng:**
-   - Nhấn `F5` hoặc chọn **Start Debugging** trong Visual Studio.
+   - Nhấn `F5` hoặc chọn **Start**.
 
 ---
 
-## 👤 Tác Giả
+## 🔑 Tài Khoản Đăng Nhập Mẫu
+
+| Vai trò | Tên đăng nhập | Mật khẩu | Họ và tên |
+| :--- | :--- | :--- | :--- |
+| **Quản trị viên (Admin)** | `admin` | `123456` | Nguyễn Tiến Dũng |
+| **Quản trị viên 2** | `admin2` | `123456` | Trần Thị Mai |
+| **Nhân viên 1 (Staff)** | `nv_nhung` | `123456` | Lê Hồng Nhung |
+| **Nhân viên 2 (Staff)** | `nv_tuan` | `123456` | Phạm Minh Tuấn |
+| **Nhân viên 3 (Staff)** | `nv_nam` | `123456` | Hoàng Anh Nam |
+
+---
+
+## 👤 Thông Tin Sinh Viên
 
 - **Họ và tên:** Nguyễn Tiến Dũng
-- **GitHub:** [@dungstergen](https://github.com/dungstergen)
+- **GitHub Repository:** [https://github.com/dungstergen/Tourbooking.git](https://github.com/dungstergen/Tourbooking.git)
 - **Email:** nguyentiendung01062005@gmail.com
-- **Dự án:** TourBooking - Báo cáo Đồ án cuối kỳ
+- **Đồ án:** TourBooking - Hệ thống Quản trị & Điều hành Tour Du lịch
